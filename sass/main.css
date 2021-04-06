@@ -1,0 +1,150 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: 0px;
+          box-sizing: 0px;
+}
+
+body {
+  background-color: white;
+  min-height: 100vh !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.container {
+  border-radius: 20px;
+  max-width: 400px !important;
+}
+
+.card {
+  border-radius: 20px !important;
+  height: 620px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0084ff), to(#00f2ff));
+  background-image: linear-gradient(to right, #0084ff, #00f2ff);
+  border: none !important;
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 8px #414141;
+          box-shadow: 0 5px 8px #414141;
+  z-index: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card .circle {
+  position: absolute;
+  bottom: -230px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #fff;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+  height: 700px;
+  width: 700px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.card .my_hed {
+  margin-top: 30px;
+  font-size: 32px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0084ff), to(#00f2ff));
+  background-image: linear-gradient(to right, #0084ff, #00f2ff);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.card .my_hed i {
+  font-size: 40px;
+}
+
+.card .fas {
+  position: relative;
+  display: block;
+  left: -87px;
+  top: 30px;
+  color: white;
+}
+
+.card .button {
+  width: 250px;
+  border-radius: 25px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0084ff), to(#00f2ff));
+  background-image: linear-gradient(to right, #0084ff, #00f2ff);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+
+.card .myInput {
+  width: 220px;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 25px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#0084ff), to(#00f2ff));
+  background-image: linear-gradient(to right, #0084ff, #00f2ff);
+  border: none;
+  display: block;
+}
+
+.card .myInput::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.card .myInput:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.card .myInput::-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.card .myInput::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+.card .myInput:focus {
+  border: none;
+  outline: none;
+}
+
+.card .check_1 {
+  font-weight: 500;
+  font-size: 12px;
+  margin: 15px auto;
+  cursor: pointer;
+  color: #555555;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 2.5rem 0rem;
+  font-weight: 500;
+}
+
+@media (man-width: 768px) {
+  .container {
+    max-width: 100% !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

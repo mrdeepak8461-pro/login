@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+body{       
+    background-color: white;
+    min-height: 100vh !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none !important;
+}
+.container{
+    border-radius: 20px ;
+    max-width: 400px !important;
+}
+.card{
+
+    border-radius: 20px !important;
+    height: 620px;
+    background-image: linear-gradient(to right, #0084ff, #00f2ff);
+    border: none !important;
+    overflow: hidden;
+    box-shadow: 0 5px 8px #414141;
+    z-index: 0;
+    box-sizing: border-box;
+    .circle{
+        position: absolute;
+        bottom: -230px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: #fff;
+        clip-path: circle(50%);
+        height: 700px;
+        width: 700px;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .my_hed{
+        margin-top: 30px;
+        font-size: 32px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        background-image: linear-gradient(to right, #0084ff, #00f2ff);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+       i{
+           font-size: 40px;
+       }
+    }
+    .fas{
+        position: relative;
+        display: block;
+        left: -87px;
+        top:30px;
+        color: rgb(255,255,255);
+    }
+    .button{
+        width: 250px;
+        border-radius: 25px;
+        background-image: linear-gradient(to right, #0084ff, #00f2ff);
+        color: #fff;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 0.5rem;
+    }
+    .myInput{
+        width: 220px;
+        padding: 10px;
+        padding-left: 40px;
+        border-radius: 25px;
+        background-image: linear-gradient(to right, #0084ff, #00f2ff);
+        border: none;
+        display: block;
+    }
+    .myInput::placeholder{
+        color: #fff;
+        opacity: 0.6;
+    }
+    .myInput:focus{
+        border: none;
+        outline: none;
+    }
+    .check_1{
+        font-weight: 500;
+        font-size: 12px;
+        margin: 15px auto;
+        cursor: pointer;
+        color: rgb(85, 85, 85);
+    }
+    h3{
+      font-size: 1.2rem;
+      margin: 2.5rem 0rem;
+      font-weight: 500;  
+    }
+}
+ @media (man-width: 768px){
+     .container{
+         max-width: 100% !important;
+     }
+ }
