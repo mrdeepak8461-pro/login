@@ -1,105 +1,467 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
-    box-sizing: 0px;
+    box-sizing: border-box;
 }
-body{       
-    background-color: white;
-    min-height: 100vh !important;
+body {
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+}
+
+//var
+$color_1: #354d9e;
+$color_2: #202020;
+$color_3: #454545;
+$color_4: #344b9b;
+
+//css classes
+.span_1 {
+    color: #354d9e;
+}
+.line {
+    border: 2px solid #1da6f1;
+    width: 50px;
+    margin: 1.3rem 0rem;
+}
+// start main css
+
+.owl-carousel-1 {
+    .item {
+        header {
+            background-image: url("../images/assests/bg.png");
+            background-position: top right;
+            background-size: 60%;
+            background-repeat: no-repeat;
+            height: 100vh;
+            nav {
+                background-color: transparent !important;
+                .navbar-brand {
+                    img {
+                        width: 150px !important;
+                    }
+                }
+                .nav-link {
+                    color: white !important;
+                    margin: 0rem 0.5rem;
+                    border-bottom: 2px solid transparent;
+                    transition: 0.8s;
+                }
+                .nav-link:hover {
+                    border-bottom: 2px solid white;
+                }
+                .btn:hover {
+                    background-color: $color_1;
+                    color: white;
+                }
+            }
+            .wrap_header_top {
+                height: 90vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .box_p {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .box_1_c {
+                        h3 {
+                            color: $color_3;
+                        }
+                        p {
+                            font-weight: 600;
+                        }
+                        .btn_box {
+                            margin-top: 1rem;
+                            .btn {
+                                background-color: $color_4;
+                                color: white;
+                                padding: 0.3rem 1rem;
+                                border-radius: 0.3rem;
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .item_2 {
+        header {
+            background-image: url("../images/assests/bg3.png");
+            background-position: top left;
+            nav {
+                .nav-link {
+                    color: black !important;
+                }
+                .nav-link {
+                    border-bottom: 2px solid transparent;
+                    transition: 0.8s;
+                }
+                .nav-link:hover {
+                    border-bottom: 2px solid $color_4;
+                }
+            }
+        }
+    }
+}
+
+// End of main page header
+.marketing_tool {
+    background-image: url("../images/assests/Bg-2.jpg");
+    background-size: cover;
+    .box_1 {
+        width: 90%;
+        h3 {
+            color: $color_4;
+        }
+    }
+}
+
+.how_it_work {
+    margin-top: 4rem;
+}
+
+.extra_features {
+    .extra_features_box {
+        margin-top: 4rem;
+        padding: 3rem 0rem;
+        background-image: url("../images/assests/Bg-3.jpg");
+        background-size: 100%;
+        .im {
+            text-align: center;
+            margin-top: 2rem;
+            img {
+                width: 110px;
+                border: 2px solid transparent;
+                padding: 1rem;
+                border-radius: 50%;
+            }
+            img:hover {
+                transition: 0.6s;
+                border: 2px solid white;
+            }
+        }
+    }
+}
+
+.our_clients {
+    margin-top: 5rem;
+    .our_clients_box {
+        background-image: url("../images/assests/bg-4.png");
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        .con_1 {
+            margin-top: 6rem;
+            width: 60%;
+        }
+        .owl-carousel {
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2rem 0rem;
+                .item_1 {
+                    background-color: white !important;
+                    border-radius: 1rem;
+                    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.6);
+                    padding: 1.8rem;
+                    width: 80%;
+                    i {
+                        color: $color_1;
+                    }
+                    .box {
+                        display: flex;
+                        align-items: center;
+                        h6 {
+                            color: $color_1;
+                            font-size: 1.1rem !important;
+                            margin-top: 1rem;
+                            font-weight: bold;
+                            margin-bottom: 0rem;
+                        }
+                        p {
+                            font-size: 0.8rem !important;
+                        }
+                        img {
+                            width: 50px;
+                            margin-right: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .footer_top {
+        padding: 4rem 0rem 2rem 0rem;
+        background-color: $color_2;
+        color: white;
+        h6 {
+            font-size: 1.3rem;
+            margin-top: 0.8rem;
+            font-weight: bold;
+            padding: 0rem 0rem 1.8rem 0rem;
+        }
+        p {
+            padding-right: 5rem;
+            font-weight: 500;
+        }
+        ul {
+            padding: 0rem;
+            list-style: none;
+            li {
+                font-weight: 500;
+                i {
+                    color: #387ac7;
+                }
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+        .media {
+            i {
+                cursor: pointer;
+                font-size: 2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+    .footer_fot {
+        background-color: black;
+        padding: 0.1rem 0rem;
+        i {
+            color: red;
+            margin: 0rem 0.2rem;
+        }
+    }
+}
+
+/*****************************************************End of Desktop********************************************************/
+
+@media only screen and (max-width: 550px) {
+    header {
+        nav {
+            background-color: transparent !important;
+            .nav-link {
+                color: black !important;
+                text-align: center;
+                border-bottom: 2px solid transparent;
+                transition: 0.8s;
+            }
+            .nav-link:hover {
+                border-bottom: 2px solid white;
+            }
+            .btn:hover {
+                background-color: $color_1;
+                color: white;
+            }
+        }
+        .header_main {
+            .hm {
+                height: 40vh;
+            }
+        }
+    }
+
+    footer {
+        .footer_top {
+            padding: 2rem 0rem 2rem 0rem;
+            h6 {
+                text-align: center;
+                margin-top: 2rem;
+                padding-bottom: 0.1rem;
+            }
+            img {
+                display: block;
+                margin: auto;
+            }
+            p {
+                padding-right: 0rem;
+                text-align: center;
+            }
+            ul {
+                text-align: center;
+                li {
+                    i {
+                        color: #387ac7;
+                        text-align: center;
+                    }
+                }
+            }
+            .media {
+                text-align: center !important;
+                i {
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// *************************************************************** start sign up page
+
+.sign_up_page {
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-a{
-    text-decoration: none !important;
-}
-.container{
-    border-radius: 20px ;
-    max-width: 400px !important;
-}
-.card{
-
-    border-radius: 20px !important;
-    height: 620px;
-    background-image: linear-gradient(to right, #0084ff, #00f2ff);
-    border: none !important;
-    overflow: hidden;
-    box-shadow: 0 5px 8px #414141;
-    z-index: 0;
-    box-sizing: border-box;
-    .circle{
+    .img_1_b {
         position: absolute;
-        bottom: -230px;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background: #fff;
-        clip-path: circle(50%);
-        height: 700px;
-        width: 700px;
-        z-index: -1;
-        overflow: hidden;
+        bottom: 0%;
+        left: 0%;
+        width: 40%;
     }
-    .my_hed{
-        margin-top: 30px;
-        font-size: 32px;
-        margin-bottom: 10px;
-        font-weight: 700;
-        background-image: linear-gradient(to right, #0084ff, #00f2ff);
-        color: transparent;
-        background-clip: text;
-        -webkit-background-clip: text;
-       i{
-           font-size: 40px;
-       }
+    .img_2_b {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 30%;
     }
-    .fas{
-        position: relative;
-        display: block;
-        left: -87px;
-        top:30px;
-        color: rgb(255,255,255);
-    }
-    .button{
-        width: 250px;
-        border-radius: 25px;
-        background-image: linear-gradient(to right, #0084ff, #00f2ff);
-        color: #fff;
-        font-weight: 700;
-        cursor: pointer;
-        margin-bottom: 0.5rem;
-    }
-    .myInput{
-        width: 220px;
-        padding: 10px;
-        padding-left: 40px;
-        border-radius: 25px;
-        background-image: linear-gradient(to right, #0084ff, #00f2ff);
-        border: none;
-        display: block;
-    }
-    .myInput::placeholder{
-        color: #fff;
-        opacity: 0.6;
-    }
-    .myInput:focus{
-        border: none;
-        outline: none;
-    }
-    .check_1{
-        font-weight: 500;
-        font-size: 12px;
-        margin: 15px auto;
-        cursor: pointer;
-        color: rgb(85, 85, 85);
-    }
-    h3{
-      font-size: 1.2rem;
-      margin: 2.5rem 0rem;
-      font-weight: 500;  
+    .box_1 {
+        width: 500px;
+        h4 {
+            color: $color_3;
+            font-weight: 500;
+        }
+        .input_box {
+            .input_item {
+                border-bottom: 2px solid gray;
+                display: flex;
+                align-items: center;
+                .imp {
+                    width: 100%;
+                    .form-control {
+                        width: 100%;
+                        border: none;
+                        color: $color_1;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .btn_box {
+                .btn {
+                    background-color: $color_4;
+                    color: white;
+                    padding: 0.3rem 1.5rem;
+                    border-radius: 0.3rem;
+                }
+            }
+        }
     }
 }
- @media (man-width: 768px){
-     .container{
-         max-width: 100% !important;
-     }
- }
+@media only screen and (max-width: 550px) {
+    .sign_up_page {
+        .box_1 {
+            width: 100%;
+        }
+        .img_1_b {
+            display: none;
+        }
+        .img_2_b {
+            display: none;
+        }
+    }
+}
+
+// *************************************************************** start Log in page
+
+.log_in_page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img_1_b {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+        width: 40%;
+    }
+    .img_2_b {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        width: 30%;
+    }
+    .box_1 {
+        width: 500px;
+        h4 {
+            color: $color_3;
+            font-weight: 500;
+        }
+        h5 {
+            color: $color_3;
+        }
+        a {
+            text-decoration: none;
+            color: $color_4;
+            font-weight: 600;
+        }
+        .input_box {
+            .input_item {
+                border-bottom: 2px solid gray;
+                display: flex;
+                align-items: center;
+                .imp {
+                    width: 100%;
+                    .form-control {
+                        width: 100%;
+                        border: none;
+                        color: $color_1;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .btn_box {
+                .btn {
+                    background-color: $color_4;
+                    color: white;
+                    padding: 0.3rem 1.5rem;
+                    border-radius: 0.3rem;
+                }
+            }
+            .our_sign_up {
+                span {
+                    padding: 0rem 1rem;
+                    margin: 0rem;
+                    color: gray;
+                    background-color: white !important;
+                }
+                hr{
+                    transform: translateY(-28px);
+                    display: none;
+                }
+
+            }
+            .media{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 40px;
+                    margin:0rem 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    .log_in_page {
+        .box_1 {
+            width: 100%;
+        }
+        .img_1_b {
+            display: none;
+        }
+        .img_2_b {
+            display: none;
+        }
+    }
+}
