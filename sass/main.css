@@ -6,7 +6,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Roboto", sans-serif;
 }
 
@@ -18,6 +18,11 @@ body {
   border: 2px solid #1da6f1;
   width: 50px;
   margin: 1.3rem 0rem;
+}
+
+body::-webkit-scrollbar {
+  border: 1px solid red;
+  width: 100%;
 }
 
 .owl-carousel-1 .item header {
@@ -147,14 +152,30 @@ body {
   margin-top: 2rem;
 }
 
-.extra_features .extra_features_box .im img {
-  width: 110px;
-  border: 2px solid transparent;
-  padding: 1rem;
+.extra_features .extra_features_box .im .im_c {
+  width: 120px;
   border-radius: 50%;
+  margin: auto;
+  border: 2px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.extra_features .extra_features_box .im img:hover {
+.extra_features .extra_features_box .im .im_c img {
+  width: 110px;
+}
+
+.extra_features .extra_features_box .im .im_c:hover {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   border: 2px solid white;
@@ -166,9 +187,9 @@ body {
 
 .our_clients .our_clients_box {
   background-image: url("../images/assests/bg-4.png");
-  background-position-y: bottom;
+  background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 100% 90%;
 }
 
 .our_clients .our_clients_box .con_1 {
@@ -282,25 +303,44 @@ footer .footer_fot i {
 
 /*****************************************************End of Desktop********************************************************/
 @media only screen and (max-width: 550px) {
+  .owl-carousel-1 .item_1 header nav .nav-link {
+    color: black !important;
+    text-align: center;
+  }
+  .owl-carousel-1 .item_2 header nav .s_logo {
+    display: none;
+  }
+  .owl-carousel-1 .item_2 header nav .nav-link {
+    color: black !important;
+    text-align: center;
+  }
+  header {
+    background-image: none !important;
+  }
   header nav {
     background-color: transparent !important;
   }
   header nav .nav-link {
     color: black !important;
+  }
+  header .wrap_header_top {
+    height: 75% !important;
+  }
+  .marketing_tool .box_1 {
+    text-align: center !important;
+  }
+  .marketing_tool .box_1 .line {
+    margin: 1rem auto;
+  }
+  .how_it_work .box_1 {
     text-align: center;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: 0.8s;
-    transition: 0.8s;
   }
-  header nav .nav-link:hover {
-    border-bottom: 2px solid white;
+  .extra_features {
+    margin-top: 2.5rem;
   }
-  header nav .btn:hover {
-    background-color: #354d9e;
-    color: white;
-  }
-  header .header_main .hm {
-    height: 40vh;
+  .our_clients .our_clients_box .con_1 {
+    margin-top: 2rem !important;
+    width: 100%;
   }
   footer .footer_top {
     padding: 2rem 0rem 2rem 0rem;
@@ -380,6 +420,14 @@ footer .footer_fot i {
           align-items: center;
 }
 
+.sign_up_page .box_1 .input_box .input_item .imp input {
+  height: 59px;
+}
+
+.sign_up_page .box_1 .input_box .input_item .imp label {
+  color: gray !important;
+}
+
 .sign_up_page .box_1 .input_box .input_item .imp {
   width: 100%;
 }
@@ -407,6 +455,12 @@ footer .footer_fot i {
   }
   .sign_up_page .img_2_b {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .h_logo {
+    display: none !important;
   }
 }
 
@@ -485,17 +539,40 @@ footer .footer_fot i {
   border-radius: 0.3rem;
 }
 
-.log_in_page .box_1 .input_box .our_sign_up span {
-  padding: 0rem 1rem;
-  margin: 0rem;
-  color: gray;
-  background-color: white !important;
+.log_in_page .box_1 .input_box .our_sign_up h5 {
+  text-align: center;
+  font-size: 1rem;
+  margin: auto !important;
+  max-width: 320px;
+  position: relative;
 }
 
-.log_in_page .box_1 .input_box .our_sign_up hr {
-  -webkit-transform: translateY(-28px);
-          transform: translateY(-28px);
-  display: none;
+.log_in_page .box_1 .input_box .our_sign_up h5:before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  background: #000;
+  left: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.log_in_page .box_1 .input_box .our_sign_up h5:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  background: #000;
+  right: 0;
+  top: 50%;
+  z-index: -2;
+}
+
+.log_in_page .box_1 .input_box .our_sign_up span {
+  background: #fff;
 }
 
 .log_in_page .box_1 .input_box .media {
@@ -510,9 +587,15 @@ footer .footer_fot i {
           align-items: center;
 }
 
-.log_in_page .box_1 .input_box .media img {
-  width: 40px;
+.log_in_page .box_1 .input_box .media .me {
   margin: 0rem 1rem;
+  padding: 0.1rem;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.log_in_page .box_1 .input_box .media .me img {
+  width: 40px;
 }
 
 @media only screen and (max-width: 550px) {

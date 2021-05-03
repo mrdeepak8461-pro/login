@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: "Roboto", sans-serif;
 }
 
@@ -23,6 +23,12 @@ $color_4: #344b9b;
     width: 50px;
     margin: 1.3rem 0rem;
 }
+
+body::-webkit-scrollbar {
+    border: 1px solid red;
+    width: 100%;
+}
+
 // start main css
 
 .owl-carousel-1 {
@@ -131,15 +137,24 @@ $color_4: #344b9b;
         .im {
             text-align: center;
             margin-top: 2rem;
-            img {
-                width: 110px;
-                border: 2px solid transparent;
-                padding: 1rem;
+            .im_c {
+                width: 120px;
                 border-radius: 50%;
+                margin:auto;
+                border:2px solid transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 120px;
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+                img {
+                    width: 110px;
+                }
             }
-            img:hover {
+            .im_c:hover{
                 transition: 0.6s;
-                border: 2px solid white;
+                border:2px solid white;
             }
         }
     }
@@ -149,9 +164,9 @@ $color_4: #344b9b;
     margin-top: 5rem;
     .our_clients_box {
         background-image: url("../images/assests/bg-4.png");
-        background-position-y: bottom;
+        background-position: bottom;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 100% 90%;
         .con_1 {
             margin-top: 6rem;
             width: 60%;
@@ -245,26 +260,66 @@ footer {
 /*****************************************************End of Desktop********************************************************/
 
 @media only screen and (max-width: 550px) {
+    .owl-carousel-1 {
+        .item_1 {
+            header {
+                nav {
+                    .nav-link {
+                        color: black !important;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .item_2 {
+            header {
+                nav {
+                    .s_logo {
+                        display: none;
+                    }
+                    .nav-link {
+                        color: black !important;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
     header {
+        background-image: none !important;
         nav {
             background-color: transparent !important;
             .nav-link {
                 color: black !important;
-                text-align: center;
-                border-bottom: 2px solid transparent;
-                transition: 0.8s;
-            }
-            .nav-link:hover {
-                border-bottom: 2px solid white;
-            }
-            .btn:hover {
-                background-color: $color_1;
-                color: white;
             }
         }
-        .header_main {
-            .hm {
-                height: 40vh;
+        .wrap_header_top {
+            height: 75% !important;
+        }
+    }
+
+    .marketing_tool {
+        .box_1 {
+            text-align: center !important;
+            .line {
+                margin: 1rem auto;
+            }
+        }
+    }
+
+    .how_it_work {
+        .box_1 {
+            text-align: center;
+        }
+    }
+    .extra_features {
+        margin-top: 2.5rem;
+    }
+    .our_clients {
+        .our_clients_box {
+            .con_1 {
+                margin-top: 2rem !important;
+                width: 100%;
             }
         }
     }
@@ -335,6 +390,15 @@ footer {
                 border-bottom: 2px solid gray;
                 display: flex;
                 align-items: center;
+                .imp{
+                    input{
+                        // border:1px solid red !important;
+                        height: 59px;
+                    }
+                    label{
+                        color: gray !important;
+                    }
+                }
                 .imp {
                     width: 100%;
                     .form-control {
@@ -367,6 +431,12 @@ footer {
         .img_2_b {
             display: none;
         }
+    }
+}
+
+@media only screen and (min-width: 980px) {
+    .h_logo {
+        display: none !important;
     }
 }
 
@@ -428,26 +498,55 @@ footer {
                 }
             }
             .our_sign_up {
-                span {
-                    padding: 0rem 1rem;
-                    margin: 0rem;
-                    color: gray;
-                    background-color: white !important;
+               
+                h5{
+                    text-align: center;
+                    font-size: 1rem;
+                    margin:auto !important;
+                    max-width: 320px;
+                    position: relative;
                 }
-                hr{
-                    transform: translateY(-28px);
-                    display: none;
+                h5:before{
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    position: absolute;
+                    background: #000;
+                    left: 0;
+                    top:50%;
+                    z-index: -2;
+                }
+                h5:after{
+                    content: "";
+                    display: block;
+                    width: 100px;
+                    height: 1px;
+                    position: absolute;
+                    background: #000;
+                    right: 0;
+                    top:50%;
+                    z-index: -2;
+                }
+                span{
+                    background: #fff;
                 }
 
             }
-            .media{
+            .media {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                img{
-                    width: 40px;
-                    margin:0rem 1rem;
+                .me{
+                    margin: 0rem 1rem;
+                    padding: 0.1rem;
+                    border-radius: 0.4rem;
+                    text-align: center;
+                    img {
+                        width: 40px;
+                    }
                 }
+                
             }
         }
     }
