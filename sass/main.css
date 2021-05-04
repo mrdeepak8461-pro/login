@@ -128,10 +128,6 @@ body::-webkit-scrollbar {
   background-size: cover;
 }
 
-.marketing_tool .box_1 {
-  width: 90%;
-}
-
 .marketing_tool .box_1 h3 {
   color: #344b9b;
 }
@@ -338,6 +334,9 @@ footer .footer_fot i {
   .extra_features {
     margin-top: 2.5rem;
   }
+  .our_clients .our_clients_box {
+    background-size: 100% 50%;
+  }
   .our_clients .our_clients_box .con_1 {
     margin-top: 2rem !important;
     width: 100%;
@@ -422,10 +421,6 @@ footer .footer_fot i {
 
 .sign_up_page .box_1 .input_box .input_item .imp input {
   height: 59px;
-}
-
-.sign_up_page .box_1 .input_box .input_item .imp label {
-  color: gray !important;
 }
 
 .sign_up_page .box_1 .input_box .input_item .imp {
