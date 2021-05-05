@@ -373,6 +373,7 @@ footer .footer_fot i {
 }
 
 .sign_up_page {
+  font-family: "Roboto", sans-serif;
   position: relative;
   height: 100vh;
   display: -webkit-box;
@@ -460,6 +461,7 @@ footer .footer_fot i {
 }
 
 .log_in_page {
+  font-family: "Roboto", sans-serif;
   position: relative;
   height: 100vh;
   display: -webkit-box;
