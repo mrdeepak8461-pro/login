@@ -140,7 +140,6 @@ body::-webkit-scrollbar {
                 width: 120px;
                 border-radius: 50%;
                 margin:auto;
-                border:2px solid transparent;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -153,7 +152,7 @@ body::-webkit-scrollbar {
             }
             .im_c:hover{
                 transition: 0.6s;
-                border:2px solid white;
+                transform: scale(1.2);
             }
         }
     }
@@ -419,6 +418,7 @@ footer {
 }
 @media only screen and (max-width: 550px) {
     .sign_up_page {
+        height: auto;
         .box_1 {
             width: 100%;
         }
@@ -551,6 +551,7 @@ footer {
 }
 @media only screen and (max-width: 550px) {
     .log_in_page {
+        height: auto;
         .box_1 {
             width: 100%;
         }
